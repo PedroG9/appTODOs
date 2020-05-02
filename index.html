@@ -7,5 +7,60 @@
 </head>
 <body>
     
+    <header>
+        <div class="container">
+            <h4>Buscador de tareas</h4>
+            <form action="">
+                <select id="prioridad">
+                    <option value="">Selecciona la prioridad</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="diaria">Diaria</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+                <input type="text" id="tareaNombre" placeholder="Nombre de la tarea">
+                <button id="buscar">Buscar tarea</button>
+            </form>
+        </div>
+
+        <div class="container" id="anadirTarea">
+            <h4>Añadir tarea</h4>
+            <form action="">
+                <select id="prioridad">
+                    <option value="">Selecciona la prioridad</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="diaria">Diaria</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+                <input type="text" id="tareaNombre">
+                <button id="guardar">Guardar</button>
+            </form>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="tareas">
+            <article class="diaria">
+                <h3>Titulo de la tarea</h3>
+                <button>Eliminar</button>
+            </article>
+            <article class="urgente">
+                <h3>Titulo de la tarea</h3>
+                <button>Eliminar</button>
+            </article>
+            <article class="mensual">
+                <h3>Titulo de la tarea</h3>
+                <button>Eliminar</button>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>APP TODO's Pedro</p> 
+    </footer>
+
 </body>
 </html>
