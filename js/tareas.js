@@ -74,12 +74,36 @@ function capturarPrioridad() {
 
 function filtrarXprioridad(plistaTareas, pSelectPrioridad) {
     let listaFiltrada = new Array();
-    for (tarea of plistaTareas) {
-        if (tarea.prioridadTarea == (pSelectPrioridad.value).toLowerCase()) {
-            listaFiltrada.push(tarea);
+    for (registro of plistaTareas) {
+        if (registro.prioridadTarea == (pSelectPrioridad.value).toLowerCase()) {
+            listaFiltrada.push(registro);
         }
+    }
+    return listaFiltrada;
+}
+
+// filtro FILTRAR POR NOMBRE
+
+var botonBuscar = document.querySelector('#btnBuscar');
+botonBuscar.addEventListener('click', capturarNombre);
+var nombreBuscar = document.querySelector('#buscarNombre').value;
+
+function capturarNombre(event) {
+    event.preventDefault();
+    if (nombreBuscar != "") {
+        pintarTarea(filtrarXnombre(listaTareas, nombreBuscar));
+    } else {
+        pintarTarea(listaTareas);
     }
 }
 
-// filtro FILTRAR NOMBRE
-
+function filtrarXnombre(){
+    let listaFiltradaXnombre = new Array();
+    for(registro of listaTareas){
+        let nombreTarea = registro.nombreTarea.toLowerCase();
+        if (nombreTarea.includes(nombreBuscar)){
+            listaFiltradaXnombre.push(registro);
+        }
+    }
+    return listaFiltradaXnombre;
+}
