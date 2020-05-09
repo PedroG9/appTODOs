@@ -9,52 +9,47 @@
 <body>
     
     <header>
+
         <div class="container">
-            <h4>Buscador de tareas</h4>
-            <form action="">
-                <select id="prioridad">
+            <div id="agregarTarea">
+                <h4>Añadir tarea</h4>
+                <form action="">
+                    <select id="agregarPrioridad">
+                        <option value="">Selecciona la prioridad</option>
+                        <option value="urgente" >Urgente</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                    </select>
+                    <input type="text" id="agregarNombre">
+                    <button id="btnAgregar">Agregar Tarea</button>
+                </form>
+            </div>
+            <div id="buscadorTarea">
+                <h4>Buscador de tareas</h4>
+                <select id="buscarPrioridad">
                     <option value="">Selecciona la prioridad</option>
                     <option value="urgente">Urgente</option>
                     <option value="diaria">Diaria</option>
                     <option value="mensual">Mensual</option>
                 </select>
-                <input type="text" id="tareaNombre" placeholder="Nombre de la tarea">
-                <button id="buscar">Buscar tarea</button>
-            </form>
-        </div>
-
-        <div class="container" id="anadirTarea">
-            <h4>Añadir tarea</h4>
-            <form action="">
-                <select id="prioridad">
-                    <option value="">Selecciona la prioridad</option>
-                    <option value="urgente">Urgente</option>
-                    <option value="diaria">Diaria</option>
-                    <option value="mensual">Mensual</option>
-                </select>
-                <input type="text" id="tareaNombre">
-                <button id="guardar">Guardar</button>
-            </form>
-
+                <input type="text" id="buscarNombre" placeholder="Nombre de la tarea">
+                <button id="btnBuscar">Buscar tarea</button>
+            </div>
         </div>
 
     </header>
-
     <main>
 
-        <section id="tareas">
-            <article class="diaria">
-                <h3>Titulo de la tarea</h3>
-                <button>Eliminar</button>
-            </article>
+        <section id="listaTareas">
+            <!--
             <article class="urgente">
                 <h3>Titulo de la tarea</h3>
-                <button>Eliminar</button>
+                <button class="btnDelete">Eliminar</button>
             </article>
             <article class="mensual">
                 <h3>Titulo de la tarea</h3>
-                <button>Eliminar</button>
-            </article>
+                <button class="btnDelete">Eliminar</button>
+            </article> -->
         </section>
 
     </main>
